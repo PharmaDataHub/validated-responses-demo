@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutics Prescription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a> > <a href="#">Patient</a> > <a href="#">Therapeutics</a>
+        </nav>
+        <div class="user-info">
+            <span>Pharmacist GC</span> | <span>Hospital Glintt</span> | <span>14:46</span>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <!-- Main Prescriptions Section -->
+            <section class="prescriptions-section">
+                <header class="prescriptions-header">
+                    <h3>Prescriptions</h3>
+                    <p>Active Prescription [Prescription from 2021-03-30 20:35]</p>
+                    <div class="score">SCORE 23</div>
+                </header>
+                <div class="medication-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Medication</th>
+                                <th>Description</th>
+                                <th>Dosage</th>
+                                <th>Frequency</th>
+                                <th>Start Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="showDetails('med1')">
+                                <td><input type="radio" name="medication" id="med1"></td>
+                                <td>DEMO PARACETAMOL 10 MG/ML</td>
+                                <td>Solution for Injection</td>
+                                <td>1000 MG</td>
+                                <td>IV | Daily</td>
+                                <td>2019-10-18</td>
+                                <td><a href="#">Edit</a> | <a href="#">View</a></td>
+                            </tr>
+                            <tr onclick="showDetails('med2')">
+                                <td><input type="radio" name="medication" id="med2"></td>
+                                <td>Aciclovir 200 mg Comp</td>
+                                <td>Oral Tablet</td>
+                                <td>200 MG</td>
+                                <td>3x daily</td>
+                                <td>2020-11-17</td>
+                                <td><a href="#">Edit</a> | <a href="#">View</a></td>
+                            </tr>
+                            <tr onclick="showDetails('med3')">
+                                <td><input type="radio" name="medication" id="med3"></td>
+                                <td>Acetylsalicylic Acid 100 mg</td>
+                                <td>Oral Tablet</td>
+                                <td>100 MG</td>
+                                <td>1x daily</td>
+                                <td>2021-03-30</td>
+                                <td><a href="#">Edit</a> | <a href="#">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions">
+                    <button>Validate Selected</button>
+                    <button>Other Actions</button>
+                </div>
+            </section>
+
+            <!-- Dynamic Information Section -->
+            <aside class="side-panel">
+                <h4>Medication Details</h4>
+                <div id="medication-details">
+                    <p>Select a medication to view details.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Hospital Glintt</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
